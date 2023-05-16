@@ -1,0 +1,11 @@
+#+TITLE: HiperDual
+#+AUTHOR: Matheus Machado Vieira
+#+EMAIL: matheusmachado708@gmail.com
+#+DESCRIPTION: Rust library that implements Hyper Dual Numbers
+
+* Introduction
+Hyper Dual (the title is in Portuguese) numbers are another kind of numbers that can help with many things, including first and second derivatives of a real function.
+
+I think it was introduced by [[https://arc.aiaa.org/doi/abs/10.2514/6.2011-886][Fike Alonso]] for some wing and aerodynamic things. Reading some others papers (you can find it, later i will add them to end of this readme), it's not exactly the more efficient way to calculate first and second orders derivatives, but that's fine.
+
+The objective of this library is to provide some support for these numbers and some basic functions for common use.
