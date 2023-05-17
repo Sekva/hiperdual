@@ -6,6 +6,40 @@
 * Introduction
 Hyper Dual (the title is in Portuguese) numbers are another kind of numbers that can help with many things, including first and second derivatives of a real function.
 
-I think it was introduced by [[https://arc.aiaa.org/doi/abs/10.2514/6.2011-886][Fike Alonso]] for some wing and aerodynamic things. Reading some others papers (you can find it, later i will add them to end of this readme), it's not exactly the more efficient way to calculate first and second orders derivatives, but that's fine.
+I think it was introduced by [[https://arc.aiaa.org/doi/abs/10.2514/6.2011-886][Fike and Alonso]] for some wing and aerodynamic things. Reading some others papers (you can find it, later i will add them to end of this readme), it's not exactly the more efficient way to calculate first and second orders derivatives, but that's fine.
 
 The objective of this library is to provide some support for these numbers and some basic functions for common use.
+
+* Whats up with these numbers?
+If you are reading this you should at least heard about the complex numbers. It's similar, it's some number with special properties that we can use to achieve (very specific in this case) some objective. For complex numbers we have the imaginary number, that is defined as follows:
+
+\[i = \sqrt -1 \iff i^2 = -1\]
+
+The hyper dual numbers takes some of these ideias (after a looong path) and extended it. We can define the hyper dual number \(x\) as:
+
+\[x \in \mathbb{HD} = x_0 + x_1\epsilon_1 + x_2\epsilon_2 + x_3\epsilon_1\epsilon_2\]
+
+and:
+
+\[\epsilon_1^2 = \epsilon_2^2 = 0\]
+\[\epsilon_1 \ne \epsilon_2 \ne 0\]
+\[\epsilon_1\epsilon_2 = \epsilon_2\epsilon_1 \ne 0\]
+
+
+And the even more cool part is that we write some function \(f\) we get it's first and second derivatives for "free":
+
+
+\[f(x + h_1\epsilon_1 + h_2\epsilon_2 + h_3\epsilon_1\epsilon_2) = f(x) + h_1f'(x)\epsilon_1 + h_2f'(x)\epsilon_2 + h_3f''(x)\epsilon_1\epsilon_2\]
+
+And that's it, cool right? Some details you can find in the [[#references][References]] section.
+
+
+* TODO ! Operations
+
+* Some references
+:PROPERTIES:
+:CUSTOM_ID: references
+:END:
+
++ https://arc.aiaa.org/doi/abs/10.2514/6.2011-886
++ https://pdfs.semanticscholar.org/e1b0/53511bc6ce4f0b80d8212e63f019f6eaaebc.pdf
